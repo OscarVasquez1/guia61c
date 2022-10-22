@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejemplo web api</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<META HTTP-EQUIV="Expires" CONTENT="0">
+    <META NAME="author" CONTENT="Oscar Rene Vasquez Avalos">
+    <META NAME="keywords" CONTENT="tecnicas programacion internet asignatura carrera ingenieria sistemas informaticos">
+    <META NAME="description" CONTENT="pagina principal de la asignatura tecnicas programacion para internet t.e. carrera ingenieria sistemas informaticos">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/estilo.css" rel="stylesheet">
+	<script src="js/codigo.js"></script>
+
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+    
+	<div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-container">
+                        <h1>TIENDA ONLINE</h1>
+                        <p class="p-large p-heading">Nombre Completo: Oscar Rene V&aacutesquez Avalos <br>Carnet: VA17011 <br>Grupo de Trabajo: 01</p>
+
+                        <p><button class="btn-solid-lg" onclick="obtenerProductos();this.style.display='none';">Obtener Productos</button></p>
+                        <div id="listado" style="display:none;">
+
+                            <form autocomplete="off" onsubmit="onFormSubmit()">
+                                
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <div>
+                                                <label for="titulo">Titulo:</label>
+                                                <input type="text" name="AgregarTitulo" id="AgregarTitulo">
+                                            </div>
+                                            <div>
+                                                <label for="precio">Precio:</label>
+                                                <input type="text" name="AgregarPrecio" id="AgregarPrecio">
+                                            </div>
+                                            <div>
+                                                <label for="descripcion">Descripcion:</label>
+                                                <input type="text" name="AgregarDescripcion" id="AgregarDescripcion">
+                                            </div>
+                                            <div>
+                                                <label for="imagen">Link de la Imagen:</label>
+                                                <input type="text" name="AgregarUrl" id="AgregarUrl">
+                                            </div>
+                                            <div>
+                                                <label for="Categoria">Categoria:</label>
+                                                <input type="text" name="AgregarCategoria" id="AgregarCategoria">
+                                            </div>
+                                            </div>
+                                    </div>
+                                   
+                                </div>
+                                <div class="form_action--button">
+                                    <input type="submit" value="Agregar" onclick="agregarProductos();this.style.display='none';">
+                                    
+                                </div>
+                                
+
+                            </form>
+                            <form name="filtroprods" id="filtroprods">
+                              Seleccione Categorias 
+                              <input type="checkbox" id="c1" value="c1" checked>Electronicos
+                            <input type="checkbox" id="c2" value="c2" checked>Joyería
+                          <input type="checkbox" id="c3" value="c3" checked>Ropa Caballero
+                          <input type="checkbox" id="c4" value="c4" checked>Ropa Dama
+                          <li>Click en la imagen para Acercamiento</li>
+                          <li>Click en precio para ordenar Asc o Desc</li>
+                            <table id="tabla" border="1">
+                            <thead>
+                            <tr><th>id</th><th>foto</th><th  id="price">price</th>
+                            <th>title</th><th>description</th><th>category</th></tr>
+                            </thead>
+                            <tbody id="tbody"></tbody>
+                            </table>
+                            </form>
+                            </div>
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </header> 
+
+    <div class="footer">
+        <div class="container">                  
+            <h5 class="text-center">Oscar Rene Vasquez Avalos - VA17011<br>Técnicas de programación para Internet (TPI115)</h5>
+        </div> 
+    </div> 
+
+    	
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script> 
+    <script src="js/jquery.magnific-popup.js"></script> 
+    <script src="js/scripts.js"></script> 
+</body>
+</html>
